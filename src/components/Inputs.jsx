@@ -8,7 +8,7 @@ const Inputs = () => {
             <input 
                 type='text'
                 placeholder='Search for city...'
-                className='text-xl p-2 w-full shadow-xl focus: outline-none capitalize placeholder:lowercase'
+                className='text-lg p-1 w-full shadow-xl focus: outline-none capitalize placeholder:lowercase'
             />
             <UilSearch size={30} className='text-white cursor-pointer transition ease-out hover:scale-125' />
             <UilLocationPoint size={30} className='text-white cursor-pointer transition ease-out hover:scale-125' />
