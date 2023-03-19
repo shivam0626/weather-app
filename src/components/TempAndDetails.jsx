@@ -20,7 +20,7 @@ const TempAndDetails = ({weather:{details,temp,icon,temp_min,temp_max,sunrise,su
             <img 
                 src={iconUrl(icon)}
                 alt='img'
-                className='w-20'
+                className='w-25'
             />
             <p className='text-4xl'>{`${temp.toFixed()}°`}</p>
             <div className='flex flex-col space-y-2'>
