@@ -34,7 +34,7 @@ const formatCurrentWeather = (data) =>{
 }
 
 const  formatForecastWeather = (data) =>{
-    letp899uip8 { timezone, hourly, daily} = data;
+    let { timezone, hourly, daily} = data;
     daily = daily.slice
 }
 
