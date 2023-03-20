@@ -70,7 +70,7 @@ function App() {
         )}
         <ToastContainer autoClose={3000} theme='colored' newestOnTop={true} />
         <hr className='mt-10' />
-        <p className='flex items-center justify-center text-white mt-6 font-cursive'>Made with ❤ by Shivam</p>
+        <p className='flex items-center justify-center text-white mt-6 text-xs '>Made with ❤ by Shivam</p>
     </div>
 
   );
