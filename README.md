@@ -16,7 +16,7 @@ This weather-app is created using React.js and tailwind css.
 ![w-2](https://user-images.githubusercontent.com/101569590/226254815-d777676f-de9a-4c15-a57f-70817e0a035a.PNG)
 
 
-2. Search weather of oof any location.
+2. Search weather of any location.
 3. Access Current Location weather . 
 4. Hourly and Daily forecast.
 5. Can see temperature in celcius and farenheight according to oyur need.
