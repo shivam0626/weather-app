@@ -8,6 +8,7 @@ import TopButtons from './components/TopButtons';
 import getFormattedWeatherData from './services/weatherService';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Map from './components/Map';
 
 function App() {
   const [query,setQuery] = useState({q:'lucknow'});
@@ -16,13 +17,13 @@ function App() {
 
   const formatBackground =()=>{
     if(!weather){
-      return "from-cyan-300 to-blue-800";
+      return "from-cyan-200 to-blue-600";
     }
-    const threshold = units === 'metric'? 25 : 60;
-    if(weather.temp <=threshold){
+    const threshold = units === 'metric'? 25 : 77;
+    if(weather.temp < threshold){
       return "from-cyan-200 to-blue-800"
     }
-    return "from-yellow-200 to-orange-700"
+    return "from-yellow-200 to-orange-600"
   }
 
   const handleLocationClick = () =>{
@@ -64,6 +65,7 @@ function App() {
          <div>
             <TimeAndLocation weather={weather} />
             <TempAndDetails weather={weather} />
+            <Map weather={weather} />
             <ForeCast title={'hourly forecast'} items={weather.hourly} />
             <ForeCast title={'daily forecast'} items={weather.daily} />
          </div>
