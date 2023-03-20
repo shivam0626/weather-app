@@ -15,11 +15,15 @@ This weather-app is created using React.js and tailwind css.
 
 ![w-2](https://user-images.githubusercontent.com/101569590/226254815-d777676f-de9a-4c15-a57f-70817e0a035a.PNG)
 
+2. Google map implemented
 
-2. Search weather of any location.
-3. Access Current Location's weather . 
-4. Hourly and Daily forecast.
-5. Can see temperature in celcius and farenheight according to your need.
+![map](https://user-images.githubusercontent.com/101569590/226348388-aece4d39-6c42-4a48-a59c-1a5fd481b692.PNG)
+
+
+3. Search weather of any location.
+4. Access Current Location's weather . 
+5. Hourly and Daily forecast.
+6. Can see temperature in celcius and farenheight according to your need.
 
 ## Tech-stacks and Libraries used:
 
