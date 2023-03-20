@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { UilSearch, UilLocationPoint } from '@iconscout/react-unicons'
 
-const Inputs = ({setQuery,units,setUnits,toast}) => {
+const Inputs = ({setQuery,units,setUnits, handleLocationClick}) => {
 
     const[city,setCity] = useState("");
 
@@ -11,21 +11,6 @@ const Inputs = ({setQuery,units,setUnits,toast}) => {
         }
     }
 
-    const handleLocationClick = () =>{
-        if(navigator.geolocation){
-            toast.info("Fetching user's location");
-            navigator.geolocation.getCurrentPosition((position)=>{
-                toast.success("Location fetched");
-                let lat = position.coords.latitude;
-                let lon = position.coords.longitude;
-
-                setQuery({
-                    lat,lon
-                });
-            })
-            
-        }
-    }
     const handleUnitsChange =(e)=>{
         const selectedUnit = e.currentTarget.name;
         if(units !== selectedUnit){

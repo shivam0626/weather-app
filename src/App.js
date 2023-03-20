@@ -16,31 +16,30 @@ function App() {
 
   const formatBackground =()=>{
     if(!weather){
-      return "from-cyan-300 to-blue-800"
+      return "from-cyan-300 to-blue-800";
     }
     const threshold = units === 'metric'? 25 : 60;
     if(weather.temp <=threshold){
       return "from-cyan-200 to-blue-800"
     }
-    return "from-yellow-100 to-red-700"
+    return "from-yellow-200 to-orange-700"
   }
 
-//   const handleLocationClick = () =>{
-//     if(navigator.geolocation){
-//         navigator.geolocation.getCurrentPosition((position)=>{
-//             let lat = position.coords.latitude;
-//             let lon = position.coords.longitude;
+  const handleLocationClick = () =>{
+        if(navigator.geolocation){
+            toast.info("Fetching user's location");
+            navigator.geolocation.getCurrentPosition((position)=>{
+                toast.success("Location fetched");
+                let lat = position.coords.latitude;
+                let lon = position.coords.longitude;
 
-//             setQuery({
-//                 lat,lon
-//             });
-//         })
-        
-//     }
-// }
-  // useEffect(()=>{
-  //   handleLocationClick();
-  // },[]);
+                setQuery({
+                    lat,lon
+                });
+            })
+            
+        }
+    }
 
   useEffect(()=>{
     const fetchWeather = async() =>{
@@ -59,7 +58,7 @@ function App() {
   return (
     <div className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br h-fit shadow-xl shadow-gray-500 ${formatBackground()}`}>
       <TopButtons setQuery={setQuery} />
-      <Inputs setQuery={setQuery} units={units} setUnits={setUnits} toast={toast} />
+      <Inputs setQuery={setQuery} units={units} setUnits={setUnits} handleLocationClick={handleLocationClick} />
 
         {weather && (
          <div>
@@ -69,7 +68,9 @@ function App() {
             <ForeCast title={'daily forecast'} items={weather.daily} />
          </div>
         )}
-        <ToastContainer autoClose={5000} theme='colored' newestOnTop={true} />
+        <ToastContainer autoClose={3000} theme='colored' newestOnTop={true} />
+        <hr className='mt-10' />
+        <p className='flex items-center justify-center text-white mt-6 font-cursive'>Made with ❤ by Shivam</p>
     </div>
 
   );
