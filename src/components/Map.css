@@ -11,3 +11,19 @@
     height:400px;
     width:630px;
 }
+
+@media only screen and (max-width: 900px) {
+    .mapouter{
+        position:relative;
+        text-align:right;
+        height:400px;
+        width:330px;
+    }
+    
+    .gmap_canvas {
+        overflow:hidden;
+        background:none!important;
+        height:400px;
+        width:330px;
+    }
+}

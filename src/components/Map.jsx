@@ -1,8 +1,8 @@
 import React from 'react'
 import "./Map.css";
 
-const Map = ({weather:{name,lat,lon}}) => {
-    const url = `https://maps.google.com/maps?q=${name}&t=&z=13&ie=UTF8&iwloc=&output=embed`
+const Map = ({weather:{name}}) => {
+    const url = `https://maps.google.com/maps?q=${name}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
   return (
     <div className="flex items-center justify-center mapouter ">
       <div className='gmap_canvas'>
